@@ -1,0 +1,10 @@
+// RTE specific files
+
+.rte-wrapper {
+    p {
+        font-size: var(--font-size-body-2);
+        font-weight: var(--font-weight-light);
+        line-height: 1.5;
+        max-width: 780px;
+    }
+}

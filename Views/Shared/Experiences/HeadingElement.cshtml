@@ -1,0 +1,16 @@
+@model OptiAlloy.Models.Elements.HeadingElement
+@{
+    var level = ViewData.GetComponentCss("level", new Dictionary<string, string>
+    {
+        { "h1", "h1" },
+        { "h2", "h2" },
+        { "h3", "h3" },
+        { "h4", "h4" },
+    });
+}
+
+@if (Model != null)
+{
+    <h1 class="@level">@Model.Body</h1>
+}
+

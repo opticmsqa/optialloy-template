@@ -1,0 +1,22 @@
+@model OptiAlloy.Models.Elements.ImageElement
+@{
+    var corners = ViewData.GetComponentCss("corners", static key => key switch
+    {
+        "rounded" => "rounded",
+        _ => null
+    });
+
+    var margin = ViewData.GetComponentCss("margin", static key => key switch
+    {
+        "top" => "mt-3",
+        "bottom" => "mb-3",
+        "both" => "mt-3 mb-3",
+        _ => null
+    });
+}
+@if (Model != null)
+{
+    // TODO: discuss if we want to implement <epi-component> without wrapper element and specify edit attributes in block itself,
+    // like here with epi-component-edit-attributes example
+    <img class="@corners @margin" epi-property="@Model.Image" alt="@Model.AltText" epi-component-edit-attributes/>
+}

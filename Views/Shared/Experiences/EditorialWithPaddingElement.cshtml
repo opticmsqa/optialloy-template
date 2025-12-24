@@ -1,0 +1,16 @@
+@model EditorialBlock
+@{
+
+    var padding = ViewData.GetComponentCss("padding", new Dictionary<string, string>
+    {
+        { "small", "p-1" },
+        { "large", "p-4" }
+    });
+}
+<div class="@padding" >
+    @if (Model is { MainBody: not null })
+    {
+        @(await Html.PartialAsync("~/Views/Shared/Blocks/EditorialBlock.cshtml", Model));
+    }
+</div>
+

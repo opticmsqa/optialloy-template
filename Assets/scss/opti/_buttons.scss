@@ -1,0 +1,36 @@
+.btn {
+    --button-font-size: 16px;
+    --button-padding: 6px 24px 6px 24px;
+    --button-text-color: var(--white);
+    --button-gradient-border: none;
+    --button-gradient-border--hover: none;
+    --button-gradient-border--active: none;
+    --button-background-color: radial-gradient( 125% 125% at 50% 125%, var(--optimizely-blue-60-shade) 0%, var(--optimizely-blue) 69.43% );
+    --button-background-color--hover: none;
+    --button-background-color--active: none;
+    --button-transition: .3s ease-in-out;
+    --button-border-radius: 30px;
+    --button-font-weight: var(--font-weight-medium);
+    font: inherit;
+    color: inherit;
+    border: none;
+    position: relative;
+    display: inline-block;
+    font-size: var(--button-font-size);
+    font-weight: var(--button-font-weight);
+    line-height: 1.5;
+    color: var(--button-text-color);
+    white-space: nowrap;
+    border-radius: var(--button-border-radius);
+    padding: var(--button-padding);
+    background: var(--button-background-color);
+    background-image: var(--button-background-color);
+}
+
+.btn-primary {
+    --button-background-color: radial-gradient( 100% 741.05% at 100% 77.78%, var(--color-secondary) 0%, #3c2bff 56.25%, var(--color-primary) 100% );
+}
+
+.btn-secondary {
+    --button-background-color: radial-gradient( 125% 125% at 50% 125%, var(--purple-60-shade) 0%, var(--purple) 69.43% );
+}

@@ -1,0 +1,103 @@
+@import "vars";
+@import "mixins";
+
+:root, :host {
+    --font-family-base: "Figtree", sans-serif;
+    --font-family-mono: "NBI Pro Mono", Arial, sans-serif;
+    --space-3xs: 4px;
+    --space-2xs: clamp(70px, .104vw + 6.67px, 8px);
+    --space-xs: clamp(11px, .104vw + 10.67px, 12px);
+    --space-s: clamp(14px, .208vw + 13.33px, 16px);
+    --space-m: clamp(21px, .313vw + 20px, 24px);
+    --space-l: clamp(28px, .417vw + 26.67px, 32px);
+    --space-xl: clamp(35px, .521vw + 33.33px, 40px);
+    --space-2xl: clamp(53px, .729vw + 50.67px, 60px);
+    --font-size-base: 16px;
+    --font-size-body-1: 14px;
+    --font-size-body-2: var(--font-size-base);
+    --font-size-body-3: 18px;
+    --font-size-overline: 12px;
+    --font-size-h6: 16px;
+    --font-size-h5: 20px;
+    --font-size-subtitle: clamp(20px, .417vw + 18.67px, 24px);
+    --font-size-h4: clamp(20px, .417vw + 1.867px, 24px);
+    --font-size-h3: clamp(24px, .625vw + 22px, 30px);
+    --font-size-h2: clamp(30px, .625vw + 28px, 36px);
+    --font-size-h1: clamp(36px, 1.25vw + 32px, 48px);
+    --font-size-d3: clamp(48px, 1.25vw + 44px, 60px);
+    --font-size-d2: clamp(60px, 1.25vw + 56px, 72px);
+    --font-size-d1: clamp(72px, 2.5vw + 64px, 96px);
+    --font-weight-extra-bold: 800;
+    --font-weight-bold: 620;
+    --font-weight-semi-bold: 600;
+    --font-weight-medium: 450;
+    --font-weight-regular: 400;
+    --font-weight-light: 300;
+}
+
+html {
+    font-size: 14px;
+}
+
+p {
+    font-size: var(--font-size-body-2);
+    font-weight: var(--font-weight-light);
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+.display-6, .display-5, .display-4, .display-3, .display-2, .display-1 {
+    color: var(--color-heading-large);
+    font-weight: var(--font-weight-bold);
+}
+
+h1, .h1 {
+    font-size: var(--font-size-h1);
+}
+
+h2, .h2 {
+    font-size: var(--font-size-h2);
+}
+
+h3, .h3 {
+    font-size: var(--font-size-h3);
+}
+
+h4, .h4 {
+    font-size: var(--font-size-h4);
+}
+
+h5, .h5 {
+    font-size: var(--font-size-h5);
+}
+
+h6, .h6 {
+    font-size: var(--font-size-h6);
+}
+
+.overline {
+    @include font-overline;
+    color: $col_text_overline !important;
+}
+
+.strong, strong {
+    font-weight: var(--font-weight-extra-bold);
+}
+
+.gradient-text {
+    background: var(--gradient-text-color);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+
+    &__optimizely-primary {
+        --gradient-text-color: linear-gradient(180deg,var(--light-blue) 0%,var(--optimizely-blue) 100%);
+    }
+
+    &__optimizely-green {
+        --gradient-text-color: radial-gradient(100% 741.05% at 100% 77.78%,var(--green) 0%,var(--light-blue) 100%);
+    }
+}

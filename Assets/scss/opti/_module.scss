@@ -1,0 +1,141 @@
+
+.module-space {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+@media (min-width: 768px) {
+    .module-space {
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+}
+
+@media (min-width: 992px) {
+    .module-space {
+        margin-top: 120px;
+        margin-bottom: 120px;
+    }
+}
+
+.module-space-tm {
+    margin-top: 60px;
+}
+
+@media (min-width: 768px) {
+    .module-space-tm {
+        margin-top: 80px;
+    }
+}
+
+@media (min-width: 992px) {
+    .module-space-tm {
+        margin-top: 120px;
+    }
+}
+
+.module-space-mb {
+    margin-bottom: 60px;
+}
+
+@media (min-width: 768px) {
+    .module-space-mb {
+        margin-bottom: 80px;
+    }
+}
+
+@media (min-width: 992px) {
+    .module-space-mb {
+        margin-bottom: 120px;
+    }
+}
+
+.module-pad {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+@media (min-width: 768px) {
+    .module-pad {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+}
+
+@media (min-width: 992px) {
+    .module-pad {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+}
+
+.module-pad-xs {
+    padding-top: 240px;
+    padding-bottom: 240px;
+}
+
+.module-pad-sm {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.module-pad-md {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.module-pad-t {
+    padding-top: 60px;
+}
+
+@media (min-width: 768px) {
+    .module-pad-t {
+        padding-top: 80px;
+    }
+}
+
+@media (min-width: 992px) {
+    .module-pad-t {
+        padding-top: 120px;
+    }
+}
+
+.module-pad-t-xs {
+    padding-top: 2.40px;
+}
+
+.module-pad-t-sm {
+    padding-top: 40px;
+}
+
+.module-pad-t-md {
+    padding-top: 80px;
+}
+
+.module-pad-b {
+    padding-bottom: 60px;
+}
+
+@media (min-width: 768px) {
+    .module-pad-b {
+        padding-bottom: 80px;
+    }
+}
+
+@media (min-width: 992px) {
+    .module-pad-b {
+        padding-bottom: 120px;
+    }
+}
+
+.module-pad-b-xs {
+    padding-bottom: 240px;
+}
+
+.module-pad-b-sm {
+    padding-bottom: 40px;
+}
+
+.module-pad-b-md {
+    padding-bottom: 80px;
+}

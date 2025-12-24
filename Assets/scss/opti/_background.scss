@@ -1,0 +1,55 @@
+.opti-background, .opti-background__gradient {
+    --background-top: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, #0f2d8e 100%);
+    --background-bottom: linear-gradient( 180deg, rgba(0, 0, 0, 0) 0%, #0f2d8e 100% );
+    --background-top--curve: linear-gradient( 0deg, var(--vulcan) 0%, rgba(0, 0, 0, 0) 100% ), radial-gradient( 30.36% 30.36% at 50.03% -69.38%, #171541 0%, rgba(23, 21, 65, 0) 81.25% ), radial-gradient( 46.03% 46.03% at 100% 30.62%, rgba(95, 29, 142, .2) 0%, rgba(95, 29, 142, 0) 100% ), radial-gradient( 70.72% 75.15% at 13.7% 11.41%, #0f2d8e 0%, rgba(15, 45, 142, 0) 100% );
+    --background-bottom--curve: linear-gradient( 180deg, var(--vulcan) 0%, rgba(0, 0, 0, 0) 100% ), radial-gradient( 30.36% 30.36% at 50.03% 0%, #171541 0%, rgba(23, 21, 65, 0) 81.25% ), radial-gradient( 46.03% 46.03% at 100% 100%, #0037ff 0%, rgba(107, 23, 204, .1) 100% ), radial-gradient( 70.72% 75.15% at 13.7% 80.79%, var(--vulcan) 0%, rgba(15, 45, 142, 0) 100% );
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-background);
+        opacity: .4;
+        position: absolute;
+        z-index: -1;
+    }
+}
+
+.theme--light .opti-background {
+    --background-top: linear-gradient( 0deg, rgba(255, 255, 255, 0) 5%, rgba(24, 117, 255, .2) 105.66% );
+    --background-bottom: linear-gradient( 180deg, rgba(255, 255, 255, 0) 28%, rgba(24, 117, 255, .1) 100.66% );
+    --background-top--curve: linear-gradient( 0deg, rgba(255, 255, 255, 0) 5%, rgba(24, 117, 255, .2) 105.66% );
+    --background-bottom--curve: linear-gradient( 180deg, rgba(255, 255, 255, 0) 28%, rgba(24, 117, 255, .1) 100.66% )
+}
+
+.opti-background__gradient::before {
+    background: var(--background-top),var(--background-bottom),var(--color-background);
+}
+
+.opti-background__gradient-top::before {
+    background: var(--background-top),var(--color-background);
+}
+
+.opti-background__gradient-bottom::before {
+    background: var(--background-bottom),var(--color-background);
+}
+
+.opti-background__gradient--curve-top, .opti-background.opti-background__gradient--curve-bottom {
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    -webkit-mask: var(--background-mask);
+}
+
+.opti-background__gradient--curve-top {
+    --background-top: var(--background-top--curve);
+    --background-mask: linear-gradient(black,black),url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="-1px" viewBox="0 0 1399.86 90.84" enable-background="new 0 0 1399.86 90.84" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.05,5.51L17.05,5.51c217.39,55.68,445.64,85.33,681.01,85.33 c235.64,0,464.13-29.72,681.74-85.52l0.05-0.02c6.66-1.79,13.33-3.55,20.01-5.29H0v0.98C5.69,2.47,11.37,3.98,17.05,5.51z"/></svg>') top center no-repeat;
+}
+
+.opti-background__gradient--curve-bottom {
+    --background-bottom: var(--background-bottom--curve);
+    --background-mask: linear-gradient(black,black),url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1399.86 90.84" enable-background="new 0 0 1399.86 90.84" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" d="M0,89.86v0.98h1399.86c-6.68-1.74-13.35-3.51-20.01-5.29l-0.05-0.02 C1162.19,29.72,933.7,0,698.06,0c-235.37,0-463.62,29.65-681,85.33l-0.01,0C11.37,86.86,5.69,88.37,0,89.86z"/></svg>') bottom center no-repeat;
+}

@@ -1,0 +1,100 @@
+@model IPageViewModel<PageData>
+
+<footer class="site-footer">
+    <div class="opti-border centered top"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="site-footer__logo-wrapper">
+                    <img src="~/gfx/optimizely_symbol_full-color.svg" width="45" height="45" alt="Optimizely logo symbol" loading="lazy">
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-lg-between">
+            <div class="col-12 col-lg-2">
+                <h3>Global HQ</h3>
+                <address class="site-footer__address">
+                    <div>119 5th Ave 7th floor</div>
+                    <div>New York, NY 10003, USA</div>
+                    <div>&nbsp;</div>
+                    <div><a href="#" class="contact">Contact us</a></div>
+                    <div>Phone: +1 603 594 0249</div>
+                </address>
+            </div>
+            <div class="col-6 col-lg-2">
+                <h3>Products</h3>
+                <ul class="site-footer__section-links">
+                    <li><a href="#">Orchestrate</a></li>
+                    <li><a href="#">Experiment</a></li>
+                    <li><a href="#">Monetize</a></li>
+                    <li><a href="#">Plans & pricing</a></li>
+                    <li><a href="#">Roadmap</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-2">
+                <h3>Resources</h3>
+                <ul class="site-footer__section-links">
+                    <li><a href="#">Insights</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Developers</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Google Optimize Sunset</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-2">
+                <h3>Company</h3>
+                <ul class="site-footer__section-links">
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Working at Optimizely</a></li>
+                    <li><a href="#">Diversity & inclusion</a></li>
+                    <li><a href="#">Executive team</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="site-footer__bottom">
+        <div class="container">
+            <div class="row site-footer__bottom-content align-items-lg-center">
+                <div class="col-lg-10 order-2 order-lg-1 mt-32 mt-lg-0 d-flex align-items-center">
+                    <p class="site-footer__copyright">&copy; 2023 Optimizely</p>
+                    <nav aria-label="Bottom links">
+                        <ul class="site-footer__bottom-links">
+                            <li>
+                                <a href="#" aria-label="Privacy policy" class="col-auto">Privacy policy</a>
+                            </li>
+                            <li>
+                                <a href="#" aria-label="Website terms of use" class="col-auto">Website terms of use</a>
+                            </li>
+                            <li>
+                                <a href="#" aria-label="Trust center" class="col-auto">Trust center</a>
+                            </li>
+                            <li>
+                                <a href="#" aria-label="Anti-slavery policy" class="col-auto">Anti-slavery policy</a>
+                            </li>
+                            <li>
+                                <a href="#" aria-label="Cookie settings" class="col-auto">Cookie settings</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-2 order-1 order-lg-2 text-right">
+                    @if (Model.Layout.LoggedIn)
+                    {
+                        @Html.ContentLink(LocalizationService.Current.GetString("/footer/logout"), "Logout")
+                    }
+                    else
+                    {
+                        if (!Model.Layout.IsInReadonlyMode)
+                        {
+                            <a href="@Model.Layout.LoginUrl" title="@Html.Translate("/footer/login")">@Html.Translate("/footer/login")</a>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>

@@ -1,0 +1,26 @@
+@model BlankSection
+
+<epi-grid class="container section card">
+    <epi-styles>
+        <epi-style name="margin">
+            <epi-style-map value="top" class="mt-3"/>
+            <epi-style-map value="bottom" class="mb-5"/>
+            <epi-style-map value="both" class="mt-3 mb5"/>
+        </epi-style>
+        <epi-style name="color">
+            <epi-style-map value="primary" class="primary"/>
+            <epi-style-map value="secondary" class="secondary"/>
+        </epi-style>
+    </epi-styles>
+    <epi-row class="row">
+        <div class="col-sm-12 col-md mb-4 mb-md-3">
+            <epi-column class="card">
+                <epi-styles>
+                    <epi-style name="color" value="primary" class="primary"/>
+                    <epi-style name="color" value="secondary" class="secondary"/>
+                </epi-styles>
+                <epi-component/>
+            </epi-column>
+        </div>
+    </epi-row>
+</epi-grid>

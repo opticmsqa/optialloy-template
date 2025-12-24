@@ -1,0 +1,42 @@
+@using EPiServer.VisualBuilder.Compositions
+@model OptiAlloy.Models.HtmlHelperExample.HtmlHelperSection
+
+@{
+    var marginMap = new Dictionary<string, string>
+    {
+        { "top", "mt-3" },
+        { "bottom", "mb-3" },
+        { "both", "mt-3 mb-3" }
+    };
+
+    if (ViewData["Node"] is SectionNode sectionNode)
+    {
+        <div class="container section @(sectionNode.GetCss("margin", marginMap))" @Html.EditAttributes(sectionNode)>
+            @foreach (var row in sectionNode.Nodes)
+            {
+                <div class="row" @Html.EditAttributes(row)>
+                    @if (row is StructureNode rowNode)
+                    {
+                        foreach (var column in rowNode.Nodes)
+                        {
+                            <div class="col-sm-12 col-md mb-4 mb-md-0" @Html.EditAttributes(column)>
+                                @if (column is StructureNode columnNode)
+                                {
+                                    foreach (var component in columnNode.Nodes)
+                                    {
+                                        <div class="@column.GetCss("margin", marginMap)" @Html.EditAttributes(component)>
+                                            @if (component is ComponentNode componentNode)
+                                            {
+                                                await Html.RenderContentDataAsync(componentNode.Component, false, [componentNode.DisplayTemplateKey], new { Node = componentNode });
+                                            }
+                                        </div>
+                                    }
+                                }
+                            </div>
+                        }
+                    }
+                </div>
+            }
+        </div>
+    }
+}

@@ -1,0 +1,8 @@
+@model OptiAlloy.Models.Elements.CTAElement
+@if (Model != null)
+{
+    <a class="btn btn-primary btn-lg" title="@Model.Text" href="@Url.ContentUrl(Model.Link)">
+        @Model.Text
+    </a>
+}
+

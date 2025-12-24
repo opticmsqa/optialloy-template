@@ -1,0 +1,275 @@
+[
+    {
+        "Key": "defaultSection",
+        "Name": "Default",
+        "BaseType": "Section",
+        "IsDefault": true,
+        "Settings": [
+            {
+                "Key": "margin",
+                "Name": "Spacing",
+                "Editor": "select",
+                "Choices": [
+                    {
+                        "Key": "none",
+                        "Name": "No spacing"
+                    },
+                    {
+                        "Key": "top",
+                        "Name": "Top"
+                    },
+                    {
+                        "Key": "bottom",
+                        "Name": "Bottom"
+                    },
+                    {
+                        "Key": "both",
+                        "Name": "Both"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Key": "fullSection",
+        "Name": "Full width",
+        "BaseType": "Section",
+        "Settings": [
+            {
+                "Key": "borders",
+                "Name": "Borders",
+                "Editor": "select",
+                "Choices": [
+                    {
+                        "Key": "none",
+                        "Name": "None"
+                    },
+                    {
+                        "Key": "top",
+                        "Name": "Top"
+                    },
+                    {
+                        "Key": "bottom",
+                        "Name": "Bottom"
+                    },
+                    {
+                        "Key": "both",
+                        "Name": "Both"
+                    }
+                ]
+            },
+            {
+                "Key": "margin",
+                "Name": "Spacing",
+                "Editor": "select",
+                "Choices": [
+                    {
+                        "Key": "none",
+                        "Name": "No spacing"
+                    },
+                    {
+                        "Key": "top",
+                        "Name": "Top"
+                    },
+                    {
+                        "Key": "bottom",
+                        "Name": "Bottom"
+                    },
+                    {
+                        "Key": "both",
+                        "Name": "Both"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Key": "cardSection",
+        "Name": "Card",
+        "BaseType": "Section",
+        "Settings": [
+            {
+                "Key": "color",
+                "Name": "Color scheme",
+                "Editor": "select",
+                "Choices": [
+                    {
+                        "Key": "primary",
+                        "Name": "Primary"
+                    },
+                    {
+                        "Key": "secondary",
+                        "Name": "Secondary"
+                    }
+                ]
+            },
+            {
+                "Key": "margin",
+                "Name": "Spacing",
+                "Editor": "select",
+                "Choices": [
+                    {
+                        "Key": "none",
+                        "Name": "No spacing"
+                    },
+                    {
+                        "Key": "top",
+                        "Name": "Top"
+                    },
+                    {
+                        "Key": "bottom",
+                        "Name": "Bottom"
+                    },
+                    {
+                        "Key": "both",
+                        "Name": "Both"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Key": "defaultColumn",
+        "Name": "Default",
+        "NodeType": "Column",
+        "IsDefault": true
+    },
+    {
+        "Key": "cardColumn",
+        "Name": "Card",
+        "NodeType": "Column",
+        "Settings": [
+            {
+                "Key": "color",
+                "Name": "Color scheme",
+                "Editor": "select",
+                "Choices": [
+                    {
+                        "Key": "primary",
+                        "Name": "Primary"
+                    },
+                    {
+                        "Key": "secondary",
+                        "Name": "Secondary"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Key": "defaultHeading",
+        "Name": "Default",
+        "ContentTypeID": 6,
+        "Settings": [
+            {
+                "Key": "level",
+                "Name": "Level",
+                "Editor": "select",
+                "Choices": [
+                    {
+                        "Key": "h1",
+                        "Name": "H1"
+                    },
+                    {
+                        "Key": "h2",
+                        "Name": "H2"
+                    },
+                    {
+                        "Key": "h3",
+                        "Name": "H3"
+                    },
+                    {
+                        "Key": "h4",
+                        "Name": "H4"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Key": "defaultImage",
+        "Name": "Default",
+        "ContentTypeID": 7,
+        "Settings": [
+            {
+                "Key": "corners",
+                "Name": "Image style",
+                "Editor": "select",
+                "Choices": [
+                    {
+                        "Key": "none",
+                        "Name": "Sharp corners"
+                    },
+                    {
+                        "Key": "rounded",
+                        "Name": "Rounded corners"
+                    }
+                ]
+            },
+            {
+                "Key": "margin",
+                "Name": "Spacing",
+                "Editor": "select",
+                "Choices": [
+                    {
+                        "Key": "none",
+                        "Name": "No spacing"
+                    },
+                    {
+                        "Key": "top",
+                        "Name": "Top"
+                    },
+                    {
+                        "Key": "bottom",
+                        "Name": "Bottom"
+                    },
+                    {
+                        "Key": "both",
+                        "Name": "Both"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Key": "defaultExperience",
+        "Name": "Default",
+        "BaseType": "Experience"
+    },
+    {
+        "Key": "unicornExperience",
+        "Name": "Unicorn",
+        "BaseType": "Experience"
+    },
+    {
+        "Key": "editorialDefault",
+        "Name": "Default",
+        "ContentTypeID": 5555
+    },
+    {
+        "Key": "EditorialWithPaddingElement",
+        "Name": "With Padding",
+        "ContentTypeID": 5555,
+        "Settings": [
+          {
+            "Key": "padding",
+            "Name": "Spacing",
+            "Editor": "select",
+            "Choices": [
+              {
+                "Key": "none",
+                "Name": "No spacing"
+              },
+              {
+                "Key": "small",
+                "Name": "Small"
+              },
+              {
+                "Key": "large",
+                "Name": "Large"
+              }
+            ]
+          }
+        ]
+    }
+]

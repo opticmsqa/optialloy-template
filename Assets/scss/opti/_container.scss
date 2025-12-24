@@ -1,0 +1,132 @@
+
+.opti-container {
+    --container-padding-top: 128px;
+    --container-padding-bottom: 128px;
+    padding-top: var(--container-padding-top);
+    padding-bottom: var(--container-padding-bottom)
+}
+
+.opti-container.opti-container__curved {
+    z-index: 2
+}
+
+.opti-container.overlap-top__large {
+    --container-padding-top: 0
+}
+
+.opti-container.overlap-top__large .opti-background::before {
+    top: auto;
+    height: 70%
+}
+
+.opti-container.overlap-top__medium {
+    --container-padding-top: 0
+}
+
+.opti-container.overlap-top__medium .opti-background::before {
+    top: auto;
+    height: 80%
+}
+
+.opti-container.overlap-top__small {
+    --container-padding-top: 0
+}
+
+.opti-container.overlap-top__small .opti-background::before {
+    top: auto;
+    height: 90%
+}
+
+.opti-container.overlap-bottom__large {
+    --container-padding-bottom: 0
+}
+
+.opti-container.overlap-bottom__large .opti-background::before {
+    bottom: auto;
+    height: 70%
+}
+
+.opti-container.overlap-bottom__medium {
+    --container-padding-bottom: 0
+}
+
+.opti-container.overlap-bottom__medium .opti-background::before {
+    bottom: auto;
+    height: 80%
+}
+
+.opti-container.overlap-bottom__small {
+    --container-padding-bottom: 0
+}
+
+.opti-container.overlap-bottom__small .opti-background::before {
+    bottom: auto;
+    height: 97%
+}
+
+.opti-container.curve-top .opti-background::before {
+    --background-top: var(--background-top--curve);
+}
+
+.opti-container.curve-bottom .opti-background::before {
+    --background-bottom: var(--background-bottom--curve);
+}
+
+
+.opti-container.padding-top__large {
+    --container-padding-top: 96px
+}
+
+.opti-container.padding-top__medium {
+    --container-padding-top: 64px
+}
+
+.opti-container.padding-top__small {
+    --container-padding-top: 32px
+}
+
+.opti-container.padding-bottom__large {
+    --container-padding-bottom: 96px
+}
+
+.opti-container.padding-bottom__medium {
+    --container-padding-bottom: 64px
+}
+
+.opti-container.padding-bottom__small {
+    --container-padding-bottom: 32px
+}
+
+@media (min-width: 992px) {
+    .opti-container.padding-top__large {
+        --container-padding-top: 192px
+    }
+
+    .opti-container.padding-top__medium {
+        --container-padding-top: 128px
+    }
+
+    .opti-container.padding-top__small {
+        --container-padding-top: 64px
+    }
+
+    .opti-container.padding-bottom__large {
+        --container-padding-bottom: 192px
+    }
+
+    .opti-container.padding-bottom__medium {
+        --container-padding-bottom: 128px
+    }
+
+    .opti-container.padding-bottom__small {
+        --container-padding-bottom: 64px
+    }
+}
+
+.opti-container.padding-top__none {
+    --container-padding-top: 0px
+}
+
+.opti-container.padding-bottom__none {
+    --container-padding-bottom: 0px
+}

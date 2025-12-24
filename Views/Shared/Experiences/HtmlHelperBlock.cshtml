@@ -1,0 +1,6 @@
+@using EPiServer.VisualBuilder.Compositions
+@model OptiAlloy.Models.HtmlHelperExample.HtmlHelperBlock
+
+<div class="rte-wrapper" @Html.EditAttributes(ViewData["Node"] as ComponentNode)>
+    @Html.PropertyFor(x => x.Body)
+</div>

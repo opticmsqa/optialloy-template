@@ -1,0 +1,22 @@
+@model JumbotronBlock
+
+<div class="row">
+    <div class="col-12 col-sm-6 col-lg-7">
+        @if (Model.OverlineImage != ContentReference.EmptyReference)
+        {
+            <div class="jumbotron-overline">
+                <img epi-property="@Model.OverlineImage" />
+                <span class="overline">@Model.OverlineText</span>
+            </div>
+        }
+        <h1 class="mb-4" epi-property="@Model.Heading">@Model.Heading</h1>
+        <p class="lead mb-5" epi-property="@Model.SubHeading">@Model.SubHeading</p>
+        @if (!string.IsNullOrEmpty(Model.ButtonText))
+        {
+            <a class="btn btn-primary btn-lg" href="@Url.ContentUrl(Model.ButtonLink)" id="jumboLink" epi-property="@Model.ButtonText">@Model.ButtonText</a>
+        }
+    </div>
+    <div class="col-12 col-sm-6 col-lg-5">
+        <img epi-property="@Model.Image" />
+    </div>
+</div>

@@ -1,0 +1,30 @@
+@model EPiServer.VisualBuilder.SectionData
+@{
+    // TODO: rethink this logic for getting CSS classes.
+    // At the moment we can do it only for sections, via exposing current rendering node from the view data
+    // But in the experience template, current rendering does not exist before template rendering,
+    // as we do not support separate templates for rows and columns
+    var borders = ViewData.GetComponentCss("borders", new Dictionary<string, string>()
+    {
+        { "top", "line-top" },
+        { "bottom", "line-bottom" },
+        { "both", "line-top line-bottom" }
+    }, null);
+
+    var margin = ViewData.GetComponentCss("margin", new Dictionary<string, string>()
+    {
+        { "top", "mt-5" },
+        { "bottom", "mb-5" },
+        { "both", "mt-5 mb-5" }
+    }, null);
+}
+
+<div class="fullwidth @borders @margin">
+    <epi-grid class="container section">
+        <epi-row class="row">
+            <epi-column class="col-sm-12 col-md mb-4 mb-md-0">
+                <epi-component/>
+            </epi-column>
+        </epi-row>
+    </epi-grid>
+</div>

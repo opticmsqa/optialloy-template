@@ -1,0 +1,14 @@
+[
+  {
+    "inputFile": "Assets/scss/style.scss",
+    "outputFile": "wwwroot/css/style.css"
+  },
+  {
+    "inputFile": "Assets/scss/theme.scss",
+    "outputFile": "wwwroot/css/theme.css"
+  },
+  {
+    "inputFile": "Assets/scss/opti.scss",
+    "outputFile": "wwwroot/css/opti.css"
+  }
+]

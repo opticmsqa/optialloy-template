@@ -1,0 +1,9 @@
+@model OptiAlloy.Models.Elements.VideoElement
+
+@if (Model is { Video: not null })
+{
+    <div class="video-component">
+        <video epi-property="@Model.Video" controls/>
+    </div>
+}
+

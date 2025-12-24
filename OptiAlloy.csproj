@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<IsPackable>false</IsPackable>
+		<SignAssembly>False</SignAssembly>
+		<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+		<UserSecretsId>18b1a3ea-d190-42ab-94d4-92f437297589</UserSecretsId>
+		<WarningsNotAsErrors>true</WarningsNotAsErrors>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<SupportedPlatform Include="browser" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Using Include="EPiServer" />
+		<Using Include="EPiServer.Core" />
+		<Using Include="EPiServer.DataAbstraction" />
+		<Using Include="EPiServer.DataAnnotations" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Using Include="OptiAlloy.Models.Blocks" />
+		<Using Include="OptiAlloy.Models.Media" />
+		<Using Include="OptiAlloy.Models.Pages" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="EPiServer.CMS" Version="13.0.0-preview2-pre-31" />
+		<PackageReference Include="EPiServer.Cms.UI.AspNetIdentity" Version="13.0.0-preview2-pre-31" />
+		<PackageReference Include="EPiServer.CloudPlatform.Cms" Version="13.0.0-preview2-pre-31" />
+		<PackageReference Include="Wangkanai.Detection" Version="8.14.0" />
+		<PackageReference Include="PuppeteerSharp" Version="20.2.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="Resources\Translations\**\*" />
+	</ItemGroup>
+
+
+</Project>

@@ -1,0 +1,12 @@
+@model IPageViewModel<EPiServer.VisualBuilder.ExperienceData>
+
+<epi-outline class="experience" experience="@Model.CurrentPage">
+    <epi-styles name="unicornExperience" class="unicorn" />
+    <epi-component class="block">
+        <epi-styles>
+            <epi-style name="padding" value="none" class="p-0"/>
+            <epi-style name="padding" value="small" class="p-3"/>
+            <epi-style name="padding" value="large" class="p-9"/>
+        </epi-styles>
+    </epi-component>
+</epi-outline>

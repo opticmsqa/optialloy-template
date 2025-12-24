@@ -1,0 +1,61 @@
+html:has(div.experience.unicorn) {
+    body {
+        background: url("/unicorn/unicorn.png");
+        background-size: cover;
+        background-position: right bottom;
+        color: #000;
+        font-family: "Comic Sans MS";
+        font-weight: 400;
+    }
+
+    .site-header {
+        .navbar-nav {
+            .nav-link {
+                color: #000;
+                font-weight: bold;
+                font-family: "Comic Sans MS"
+            }
+        }
+    }
+
+    .site-footer {
+        background: transparent;
+
+        a, .site-footer__address, .site-footer__section-links, .site-footer__section-links {
+            color: #000;
+        }
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: #000;
+    }
+
+    .fullwidth {
+        background: transparent;
+
+        img {
+            border-radius: 1.5rem !important;
+            border: solid .5rem pink;
+        }
+    }
+
+    .btn-primary {
+        background: pink;
+        border: solid .5rem purple;
+        color: #000;
+    }
+
+    .card {
+        &.primary {
+            background: pink !important;
+            box-shadow: none;
+            border: solid .5rem purple;
+        }
+
+        &.secondary {
+            background: turquoise !important;
+            box-shadow: none;
+            border: solid .5rem pink;
+        }
+    }
+}

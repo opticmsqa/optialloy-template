@@ -1,0 +1,24 @@
+@import "vars";
+@import "mixins";
+
+.aside {
+    h2 {
+        display: block;
+        @include font-overline;
+    }
+
+    ul {
+        padding: 0;
+
+        li {
+            position: relative;
+            list-style: none;
+        }
+    }
+
+    .listResult {
+        .small {
+            color: $col_text_overline;
+        }
+    }
+}

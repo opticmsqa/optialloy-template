@@ -1,0 +1,28 @@
+@model IPageViewModel<SitePageData>
+
+@{
+    Layout = "~/Views/Shared/Layouts/_Root.cshtml";
+}
+
+@{
+    /*await Html.RenderPartialAsync("Breadcrumbs");*/
+}
+
+<div class="my-5">
+    <div class="row">
+        <div class="col-12 col-md-7">
+            @RenderBody()
+        </div>
+
+        <div class="col-12 col-md-4 offset-md-1 aside">
+            @if (IsSectionDefined("RelatedContent"))
+            {
+                @RenderSection("RelatedContent")
+            }
+            else if (Model.CurrentPage is IHasRelatedContent)
+            {
+                @Html.PropertyFor(x => ((IHasRelatedContent)x.CurrentPage).RelatedContentArea, new { Aside = true })
+            }
+        </div>
+    </div>
+</div>

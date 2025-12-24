@@ -1,0 +1,10 @@
+@mixin font-overline {
+    display: inline-block;
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-overline);
+    font-weight: var(--font-weight-regular);
+    line-height: 20px;
+    color: var(--color-overline);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}

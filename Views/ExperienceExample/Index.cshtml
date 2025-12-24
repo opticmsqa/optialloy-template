@@ -1,0 +1,62 @@
+@using EPiServer.Cms.VisualBuilder.Rendering
+@using EPiServer.VisualBuilder.Compositions
+@model ExperienceViewModel<OptiAlloy.Models.HtmlHelperExample.HtmlHelperExperience>
+
+@{
+    var marginMap = new Dictionary<string, string>
+    {
+        { "top", "mt-3" },
+        { "bottom", "mb-3" },
+        { "both", "mt-3 mb-3" }
+    };
+}
+
+@if (Model.Composition != null)
+{
+    <div class="experience @Model.Composition.GetTheme()">
+        @foreach (var section in Model.Composition.Nodes)
+        {
+            // Example #1
+            <div class="container section @(section.GetCss("margin", marginMap))" @Html.EditAttributes(section)>
+                @if (section is SectionNode sectionNode)
+                {
+                    foreach (var row in sectionNode.Nodes)
+                    {
+                        <div class="row @row.GetCss("margin", marginMap)" @Html.EditAttributes(row)>
+                            @if (row is StructureNode rowNode)
+                            {
+                                foreach (var column in rowNode.Nodes)
+                                {
+                                    <div class="col-sm-12 col-md mb-4 mb-md-0 @column.GetCss("margin", marginMap)" @Html.EditAttributes(column)>
+                                        @if (column is StructureNode columnNode)
+                                        {
+                                            foreach (var component in columnNode.Nodes)
+                                            {
+                                                <div class="@column.GetCss("margin", marginMap)" @Html.EditAttributes(component)>
+                                                    @if (component is ComponentNode componentNode)
+                                                    {
+                                                        await Html.RenderContentDataAsync(componentNode.Component, false, [componentNode.DisplayTemplateKey], new { Node = componentNode });
+                                                    }
+                                                </div>
+                                            }
+                                        }
+                                    </div>
+                                }
+                            }
+                        </div>
+                    }
+                }
+                else if (section is ComponentNode componentNode)
+                {
+                    await Html.RenderContentDataAsync(componentNode.Component, false, [componentNode.DisplayTemplateKey], new { Node = componentNode });
+                }
+            </div>
+
+            // Example #2
+            {
+                // Render section and block from template. Handle edit attributes and classes in the template
+                await Html.RenderCompositionSectionOrBlock(section);
+            }
+        }
+    </div>
+}

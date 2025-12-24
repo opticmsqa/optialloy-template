@@ -1,0 +1,112 @@
+@import "vars";
+
+//
+// Site Header
+//
+
+.theme--dark {
+    .site-header {
+        --header-background-color: var(--vulcan);
+        --menu-background-color: rgb(16 20 29 / 95%);
+        --primary-link-color: var(--bright-gray);
+        --primary-link-hover-color: var(--light-blue);
+        --primary-link-arrow-hover-color: var(--light-blue);
+        --heading-link-color: var(--white);
+        --large-link-color: white;
+        --small-link-color: white;
+        --label-color: var(--optimizely-blue-20-tint);
+        --button-text-color: white;
+        --button-background-color: rgb(0 55 255 / 40%);
+        --button-text-hover-color: white;
+        --button-background-hover-color: rgb(0 55 255 / 80%);
+        --columns-heading-color: white;
+        --menu-bottom-background-color: rgb(255 255 255 / 3%);
+        --menu-bottom-arrow-color: var(--light-blue);
+        --divider-color: rgb(220 223 227 / 30%);
+        --mobile-gradient-blur: linear-gradient(181deg, rgb(8 7 54 / 90%), #1e1c7a);
+        --hamburger-icon-color: white;
+    }
+}
+
+
+.site-header {
+    .site-header__nav {
+        > .nav-item {
+            flex: 0 0 auto;
+        }
+    }
+
+    @media (max-width: 991.98px) {
+        padding: 10px 0;
+    }
+
+    @media (min-width: 992px) {
+        min-height: 81px;
+
+        .site-header__container {
+            min-height: 81px;
+            display: flex;
+        }
+
+        .site-header__nav {
+            margin-left: 20px;
+        }
+    }
+
+    @media (min-width: 1400px) {
+        .site-header__nav {
+            margin-left: 60px;
+        }
+    }
+
+
+    @media (max-width: 767.98px) {
+        .logo {
+            max-width: 110px;
+        }
+    }
+
+    .navbar-toggler {
+        background: var(--optimizely-blue-60-shade);
+        color: var(--white);
+        padding: 7px 16px;
+
+        &:hover, &:focus {
+            background: var(--optimizely-blue-40-shade);
+        }
+
+        .navbar-toggler-icon {
+            height: unset;
+            width: unset;
+        }
+    }
+
+    .navbar-nav {
+        .nav-link {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 15px;
+            letter-spacing: -.1px;
+            background: none;
+            border: none;
+            appearance: none;
+            color: var(--primary-link-color);
+
+            &:hover, &:focus {
+                color: var(--menu-bottom-arrow-color);
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .site-header .navbar-nav .nav-link {
+        padding: 11px 10px 33px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .site-header .navbar-nav .nav-link {
+        padding: 11px 20px 33px;
+    }
+}
